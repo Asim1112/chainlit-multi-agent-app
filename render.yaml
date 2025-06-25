@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: chainlit-app
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: chainlit run chainlit_app.py --port 10000 --host 0.0.0.0
+    envVars:
+      - key: GEMINI_API_KEY
+        value: your-real-gemini-api-key-here
